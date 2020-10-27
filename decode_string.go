@@ -44,7 +44,7 @@ func (dec *Decoder) decodeString(v *string) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return nil
@@ -85,7 +85,7 @@ func (dec *Decoder) decodeStringNull(v **string) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return nil

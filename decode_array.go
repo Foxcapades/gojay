@@ -59,7 +59,7 @@ func (dec *Decoder) decodeArray(arr UnmarshalerJSONArray) (int, error) {
 			if err != nil {
 				return 0, err
 			}
-			return dec.cursor, nil
+			return dec.cursor, dec.err
 		default:
 			return 0, dec.raiseInvalidJSONErr(dec.cursor)
 		}
@@ -128,7 +128,7 @@ func (dec *Decoder) decodeArrayNull(v interface{}) (int, error) {
 			if err != nil {
 				return 0, err
 			}
-			return dec.cursor, nil
+			return dec.cursor, dec.err
 		default:
 			return 0, dec.raiseInvalidJSONErr(dec.cursor)
 		}

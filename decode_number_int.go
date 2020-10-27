@@ -54,7 +54,7 @@ func (dec *Decoder) decodeInt(v *int) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -106,7 +106,7 @@ func (dec *Decoder) decodeIntNull(v **int) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -155,7 +155,7 @@ func (dec *Decoder) decodeInt16(v *int16) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -200,7 +200,7 @@ func (dec *Decoder) decodeInt16Null(v **int16) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -387,7 +387,7 @@ func (dec *Decoder) decodeInt8(v *int8) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -432,7 +432,7 @@ func (dec *Decoder) decodeInt8Null(v **int8) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -617,7 +617,7 @@ func (dec *Decoder) decodeInt32(v *int32) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -661,7 +661,7 @@ func (dec *Decoder) decodeInt32Null(v **int32) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -848,7 +848,7 @@ func (dec *Decoder) decodeInt64(v *int64) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -892,7 +892,7 @@ func (dec *Decoder) decodeInt64Null(v **int64) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)

@@ -193,7 +193,7 @@ func (dec *Decoder) decodeObjectNull(v interface{}) (int, error) {
 			if err != nil {
 				return 0, err
 			}
-			return dec.cursor, nil
+			return dec.cursor, dec.err
 		}
 	}
 	return 0, dec.raiseInvalidJSONErr(dec.cursor)

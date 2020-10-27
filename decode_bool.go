@@ -45,7 +45,7 @@ func (dec *Decoder) decodeBool(v *bool) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return nil
@@ -90,7 +90,7 @@ func (dec *Decoder) decodeBoolNull(v **bool) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return nil

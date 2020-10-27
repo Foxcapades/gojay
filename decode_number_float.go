@@ -42,7 +42,7 @@ func (dec *Decoder) decodeFloat64(v *float64) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -86,7 +86,7 @@ func (dec *Decoder) decodeFloat64Null(v **float64) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -250,7 +250,7 @@ func (dec *Decoder) decodeFloat32(v *float32) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
@@ -294,7 +294,7 @@ func (dec *Decoder) decodeFloat32Null(v **float32) error {
 			if err != nil {
 				return err
 			}
-			return nil
+			return dec.err
 		}
 	}
 	return dec.raiseInvalidJSONErr(dec.cursor)
